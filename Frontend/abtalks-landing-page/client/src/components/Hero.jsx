@@ -2,14 +2,14 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto">
-      <h1 className="text-4xl sm:text-6xl font-black text-gray-900 tracking-tight leading-tight mb-4">
+    <section className="py-12 px-4 sm:px-6 lg:px-8 text-center max-w-4xl mx-auto">
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-[#27322c] tracking-tight leading-tight mb-4">
         Code consistently. Build publicly.{' '}
-        <span className="block text-purple-600 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+        <span className="block text-[#2f5d3d] mt-1">
           Get noticed.
         </span>
       </h1>
-      <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-8 font-medium">
+      <p className="text-base sm:text-lg text-[#607367] max-w-2xl mx-auto mb-6 font-medium leading-relaxed">
         Join India's premier coding community for college students to learn, build, and accelerate your tech career through verified proof of work.
       </p>
     </section>

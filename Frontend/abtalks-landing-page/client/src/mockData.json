@@ -1,0 +1,87 @@
+{
+  "tracks": [
+    {
+      "id": "ai",
+      "title": "AI & Agentic Systems",
+      "desc": "Build RAG agents, MCP servers, and LLM pipelines over 60 days.",
+      "badge": "Hot Track",
+      "duration": "60 Days"
+    },
+    {
+      "id": "se",
+      "title": "Software Engineering",
+      "desc": "Master full-stack React, Node.js, and system architecture with real-world builds.",
+      "badge": "Popular",
+      "duration": "60 Days"
+    },
+    {
+      "id": "ds",
+      "title": "Data Science & Analytics",
+      "desc": "Deep dive into PyTorch, ETL pipelines, and predictive analytics models.",
+      "badge": "New",
+      "duration": "60 Days"
+    }
+  ],
+  "proofWall": [
+    {
+      "id": 1,
+      "student": "Rahul M.",
+      "day": 12,
+      "track": "AI Track",
+      "project": "Custom KB Chatbot",
+      "time": "12m ago",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com"
+    },
+    {
+      "id": 2,
+      "student": "Priya Sharma",
+      "day": 28,
+      "track": "Software Engineering",
+      "project": "Rate Limiter Middleware",
+      "time": "45m ago",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com"
+    },
+    {
+      "id": 3,
+      "student": "Aman Verma",
+      "day": 5,
+      "track": "Data Science Track",
+      "project": "Sales Forecasting Model",
+      "time": "2h ago",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com"
+    }
+  ],
+  "dashboard": {
+    "studentName": "Rohan",
+    "cohortRank": 42,
+    "totalStudents": 1295,
+    "currentDay": 28,
+    "totalDays": 60,
+    "currentStreak": 17,
+    "shieldsAvailable": 1,
+    "todayTask": {
+      "day": 28,
+      "title": "BUILD A RAG AGENT",
+      "desc": "Implement a retrieval-augmented generation pipeline using vector embeddings and LangChain."
+    },
+    "heatmapDays": [
+      "completed", "completed", "completed", "completed", "completed", "completed", "completed", "completed", "completed", "completed",
+      "completed", "completed", "completed", "completed", "completed", "completed", "completed", "missed", "completed", "completed",
+      "completed", "completed", "completed", "completed", "completed", "missed", "completed", "completed", "upcoming", "upcoming",
+      "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming",
+      "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming",
+      "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming", "upcoming"
+    ]
+  },
+  "dayTask": {
+    "day": 12,
+    "totalDays": 60,
+    "track": "AI Track",
+    "title": "A Custom KB Chatbot",
+    "description": "Build a Knowledge Base chatbot that indexes local markdown files and answers user queries using vector embeddings.\n\n### Objective\n1. Set up a vector storage pipeline (ChromaDB or FAISS).\n2. Implement similarity search for incoming queries.\n3. Wrap the response in a streamlined UI layer.",
+    "postTemplate": "Day 12/60 of the #60DayCodingChallenge complete! 🚀 Built a custom KB Chatbot indexing local markdown files with vector search. Check out the repo!"
+  }
+}

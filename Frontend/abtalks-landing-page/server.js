@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 // -- FRONTEND ROUTES --
 // Anything that doesn't match an API route above should be handled by React Router.
 // This is essential for single-page applications.
-app.get('*', (req, res) => {
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 

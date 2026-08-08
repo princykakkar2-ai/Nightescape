@@ -3,35 +3,35 @@ import { Users, Code, Briefcase } from 'lucide-react';
 
 const Stats = () => {
   return (
-    <section className="max-w-5xl mx-auto px-4 py-12">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-gray-50/50 rounded-2xl p-8 border border-gray-100">
-        <div className="flex items-center justify-center gap-4">
-          <div className="p-3 bg-purple-100 text-purple-600 rounded-xl">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 bg-[#f4f7f4] rounded-3xl p-6 border border-[#d0dad2]">
+        <div className="flex items-center justify-center gap-4 p-2">
+          <div className="p-3 bg-[#a1c4ab] text-[#1c3824] rounded-2xl">
             <Users className="w-6 h-6" />
           </div>
           <div>
-            <div className="text-2xl font-black text-gray-900">10,000+</div>
-            <div className="text-sm font-medium text-gray-500">members</div>
+            <div className="text-2xl font-black text-[#27322c]">10,000+</div>
+            <div className="text-xs font-semibold text-[#607367]">members</div>
           </div>
         </div>
         
-        <div className="flex items-center justify-center gap-4">
-          <div className="p-3 bg-blue-100 text-blue-600 rounded-xl">
+        <div className="flex items-center justify-center gap-4 p-2">
+          <div className="p-3 bg-[#8fa4ad] text-[#1a2327] rounded-2xl">
             <Code className="w-6 h-6" />
           </div>
           <div>
-            <div className="text-2xl font-black text-gray-900">500+</div>
-            <div className="text-sm font-medium text-gray-500">projects</div>
+            <div className="text-2xl font-black text-[#27322c]">500+</div>
+            <div className="text-xs font-semibold text-[#607367]">projects</div>
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-4">
-          <div className="p-3 bg-amber-100 text-amber-600 rounded-xl">
+        <div className="flex items-center justify-center gap-4 p-2">
+          <div className="p-3 bg-[#f0b28e] text-[#592b12] rounded-2xl">
             <Briefcase className="w-6 h-6" />
           </div>
           <div>
-            <div className="text-2xl font-black text-gray-900">100+</div>
-            <div className="text-sm font-medium text-gray-500">hiring partners</div>
+            <div className="text-2xl font-black text-[#27322c]">100+</div>
+            <div className="text-xs font-semibold text-[#607367]">hiring partners</div>
           </div>
         </div>
       </div>
