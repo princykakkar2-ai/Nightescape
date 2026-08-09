@@ -53,8 +53,8 @@ ABTalks is a **60-Day Proof of Work Challenge** platform. It gives learners a da
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/princykakkar2-ai/Nightescape.git
+cd Nightescape/Frontend/abtalks-landing-page
 
 # Install dependencies
 npm install
