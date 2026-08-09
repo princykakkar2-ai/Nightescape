@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Flame, ArrowRight, CheckCircle2, XCircle, Clock } from 'lucide-react';
+import { Shield, Flame, ArrowRight, Award } from 'lucide-react';
 import mockData from '../mockData.json';
+import PortfolioCardModal from '../components/PortfolioCardModal';
+import AccountabilityPod from '../components/AccountabilityPod';
 
 const DashboardPage = () => {
   const [profileState, setProfileState] = useState('active'); // active | empty | missed
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const activeData = mockData.dashboard;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-8">
-      {/* Profile Edge Case Switcher Controls */}
+      {/* Portfolio Card Modal Component */}
+      <PortfolioCardModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        studentData={activeData}
+      />
+
+      {/* Demo Profile State Controls */}
       <div className="bg-[#f4f7f4] border border-[#d0dad2] rounded-2xl p-4 flex flex-wrap items-center justify-between gap-4">
         <span className="text-xs font-bold text-[#607367] uppercase tracking-wider">Demo Profile State:</span>
         <div className="flex flex-wrap gap-2">
@@ -41,8 +51,8 @@ const DashboardPage = () => {
         </div>
       </div>
 
-      {/* Welcome Banner */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      {/* Header Banner */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#f4f7f4] border border-[#d0dad2] rounded-3xl p-6">
         <div>
           <h1 className="text-3xl font-black text-[#27322c]">
             Welcome back, {profileState === 'empty' ? 'New Builder' : activeData.studentName} 👋
@@ -55,11 +65,18 @@ const DashboardPage = () => {
               : `Cohort Rank #${activeData.cohortRank} of ${activeData.totalStudents} students.`}
           </p>
         </div>
+
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="min-h-[48px] px-5 py-2.5 bg-[#8eb89b] hover:bg-[#a1c4ab] text-[#1c3824] font-black rounded-2xl flex items-center gap-2 transition-colors border border-[#d0dad2] self-start sm:self-auto"
+        >
+          <Award className="w-5 h-5 text-[#1c3824]" />
+          <span>Recruiter Portfolio Card</span>
+        </button>
       </div>
 
-      {/* Streak Metric Grid & Shield Banner */}
+      {/* Top Metric Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Metric 1: Large Streak Display with Solar Amber typography */}
         <div className="bg-[#f4f7f4] border border-[#d0dad2] rounded-3xl p-6 flex flex-col justify-between shadow-xs">
           <div>
             <span className="text-xs font-bold uppercase text-[#607367] tracking-wider block mb-2">Challenge Progress</span>
@@ -76,7 +93,6 @@ const DashboardPage = () => {
           </div>
         </div>
 
-        {/* Metric 2: Streak Shield Banner */}
         <div className="bg-[#f4f7f4] border border-[#d0dad2] rounded-3xl p-6 flex flex-col justify-between shadow-xs">
           <div>
             <div className="flex items-center gap-2 text-[#2f5d3d] mb-2">
@@ -99,7 +115,6 @@ const DashboardPage = () => {
           </div>
         </div>
 
-        {/* Today's Focus Card */}
         <div className="bg-[#27322c] text-[#f4f7f4] rounded-3xl p-6 flex flex-col justify-between shadow-md">
           <div>
             <span className="text-xs font-bold uppercase text-[#a1c4ab] tracking-wider block mb-2">Today's Focus</span>
@@ -122,6 +137,9 @@ const DashboardPage = () => {
         </div>
       </div>
 
+      {/* NEW FEATURE: Accountability Pod Component */}
+      <AccountabilityPod squadData={activeData.squad} />
+
       {/* 60-Day Contribution Heatmap */}
       <section className="bg-[#f4f7f4] border border-[#d0dad2] rounded-3xl p-6 sm:p-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
@@ -142,11 +160,10 @@ const DashboardPage = () => {
           </div>
         </div>
 
-        {/* Heatmap Grid */}
         <div className="grid grid-cols-6 sm:grid-cols-10 md:grid-cols-12 gap-2 sm:gap-3">
           {activeData.heatmapDays.map((status, index) => {
             const dayNum = index + 1;
-            let bgColor = 'bg-[#d0dad2] text-[#607367]'; // upcoming
+            let bgColor = 'bg-[#d0dad2] text-[#607367]';
             if (profileState !== 'empty') {
               if (status === 'completed') bgColor = 'bg-[#8eb89b] text-[#1c3824] font-bold';
               if (status === 'missed') bgColor = 'bg-[#e78479] text-white font-bold';

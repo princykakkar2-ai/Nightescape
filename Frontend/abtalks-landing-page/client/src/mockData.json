@@ -67,6 +67,19 @@
       "title": "BUILD A RAG AGENT",
       "desc": "Implement a retrieval-augmented generation pipeline using vector embeddings and LangChain."
     },
+    "squad": {
+      "id": "Squad 4",
+      "track": "AI & Agentic Systems",
+      "completedToday": 4,
+      "totalMembers": 5,
+      "members": [
+        { "name": "Rohan (You)", "initials": "RO", "submitted": true, "day": 28 },
+        { "name": "Aarav Patel", "initials": "AP", "submitted": true, "day": 28 },
+        { "name": "Neha Gupta", "initials": "NG", "submitted": true, "day": 28 },
+        { "name": "Karan Singh", "initials": "KS", "submitted": true, "day": 28 },
+        { "name": "Sanya Malhotra", "initials": "SM", "submitted": false, "day": 27 }
+      ]
+    },
     "heatmapDays": [
       "completed", "completed", "completed", "completed", "completed", "completed", "completed", "completed", "completed", "completed",
       "completed", "completed", "completed", "completed", "completed", "completed", "completed", "missed", "completed", "completed",
