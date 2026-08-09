@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { X, Copy, Download, Check, ExternalLink, Flame, Shield, Award, Github, Linkedin } from 'lucide-react';
+import { X, Copy, Download, Check, ExternalLink, Flame, Shield, Award, Code, Share2 } from 'lucide-react';
 
 const PortfolioCardModal = ({ isOpen, onClose, studentData }) => {
   const [copiedLink, setCopiedLink] = useState(false);
@@ -126,8 +126,8 @@ const PortfolioCardModal = ({ isOpen, onClose, studentData }) => {
                 <Shield className="w-4 h-4 fill-[#1c3824]" /> Verified Commits &amp; Posts
               </span>
               <div className="flex items-center gap-2">
-                <Github className="w-4 h-4" />
-                <Linkedin className="w-4 h-4" />
+                <Code className="w-4 h-4" />
+                <Share2 className="w-4 h-4" />
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@ const PortfolioCardModal = ({ isOpen, onClose, studentData }) => {
               rel="noreferrer"
               className="min-h-[48px] w-full bg-[#27322c] hover:bg-[#1a231e] text-[#f4f7f4] font-bold rounded-2xl text-xs flex items-center justify-center gap-2 transition-colors"
             >
-              <Linkedin className="w-4 h-4" />
+              <Share2 className="w-4 h-4" />
               <span>Add to LinkedIn Feature Section</span>
               <ExternalLink className="w-3 h-3" />
             </a>
